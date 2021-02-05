@@ -20,6 +20,7 @@
     "chalk": "^4.1.0",
     "chokidar-cli": "^2.1.0",
     "connect-livereload": "^0.6.1",
+    "cypress": "^4.11.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "livereload": "^0.9.1",
@@ -31,7 +32,6 @@
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
-    "cypress": "^4.12.1",
     "cypress-html-validate": "^1.2.2",
     "cypress-wait-until": "^1.7.1",
     "email-validator": "^2.0.4",
