@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css">
+  <link script="script.js" href="script">
 </head>
 
 <body>
@@ -11,13 +12,13 @@
     <button class="arrow prev">⇦</button>
     <div class="gallery">
       <ul class="images">
-        <li><img src="images/onigiri_1.png"></li>
-        <li><img src="images/onigiri_2.png"></li>
-        <li><img src="images/onigiri_3.png"></li>
-        <li><img src="images/onigiri_4.png"></li>
-        <li><img src="images/roll_1.png"></li>
-        <li><img src="images/roll_2.png"></li>
-        <li><img src="images/roll_3.png"></li>
+        <li><img src="images/onigiri_1.png" alt="onigiri_1"></li>
+        <li><img src="images/onigiri_2.png" alt="onigiri_2"></li>
+        <li><img src="images/onigiri_3.png" alt="onigiri_3"></li>
+        <li><img src="images/onigiri_4.png" alt="onigiri_4"></li>
+        <li><img src="images/roll_1.png" alt="roll_1"></li>
+        <li><img src="images/roll_2.png" alt="roll_2"></li>
+        <li><img src="images/roll_3.png" alt="roll_3"></li>
       </ul>
     </div>
     <button class="arrow next">⇨</button>
@@ -25,12 +26,15 @@
 
   <script>
     /* label the images, just for convenience, to visually track them */
-    let i = 1;
-    for(let li of carousel.querySelectorAll('li')) {
-      li.style.position = 'relative';
-      li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-      i++;
-    }
+    const images = document.querySelectorAll('.carousel img');
+
+    const imageArray = Array.from(images);
+    
+    picArray = [];
+
+    imageArray.forEach((element) => {
+        console.log(element);
+    })
 
     /* configuration */
     let width = 130; // image width
