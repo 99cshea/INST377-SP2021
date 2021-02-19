@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!-- this code was made by following the example at https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767. citing sources is cool! -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Christopher Shea Lab 4</title>
+</head>
+
+<body>
+
+    <form method="post" action="/api">
+      <h1><strong>Christopher Shea's Lab 4</strong></h1>
+        <ul class="flex-outer">
+          <li>
+            <label for="fname">First Name</label>
+            <input name="fname" type="text" id="fname" placeholder="Enter your first name here">
+          </li>
+          <li>
+            <label for="lname">Last Name</label>
+            <input name="lname" type="text" id="lname" placeholder="Enter your last name here">
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input name="email" type="email" id="email" placeholder="Enter your email here">
+          </li>
+          <li>
+            <label for="phone">Phone</label>
+            <input name="phone" type="tel" id="phone" placeholder="Enter your phone here">
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <textarea name="message" rows="5" cols="33" id="message" placeholder="Enter your message here"></textarea>
+          </li>
+          <li>
+            <p name="age">Age</p>
+            <ul name="age" class="flex-inner">
+                <li>
+                  <input name="20-29" type="checkbox" id="twenty-to-twentynine">
+                  <label for="twenty-to-twentynine">20-29</label>
+                </li>
+                <li>
+                  <input name="20-29" type="checkbox" id="thirty-to-thirtynine">
+                  <label for="thirty-to-thirtynine">30-39</label>
+                </li>
+                <li>
+                    <input name="20-29" type="checkbox" id="forty-to-fortynine">
+                    <label for="forty-to-fortynine">40-49</label>
+                </li>
+                <li>
+                    <input name="20-29" type="checkbox" id="fifty-to-fiftynine">
+                    <label for="fifty-to-fiftynine">50-59</label>
+                </li>
+                <li>
+                    <input name="20-29" type="checkbox" id="sixty-to-sixtynine">
+                    <label for="sixty-to-sixtynine">60-69</label>
+                </li>
+                <li>
+                    <input name="20-29" type="checkbox" id="other">
+                    <label for="other">Other</label>
+                </li>
+              </ul>
+          </li>
+          <li>
+            <button method="post" action="/api" name="submit" type="submit" id="submit">Submit</button>
+          </li>
+        </ul>
+      </form>
+
+</body>
+</html>
