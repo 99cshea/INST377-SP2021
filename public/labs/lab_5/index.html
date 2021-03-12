@@ -1,0 +1,63 @@
+<!-- this code was written with the help of Wes Bos' great tutorial at https://www.youtube.com/watch?v=y4gZMJKAeWs -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Christopher Shea's Lab 5</title>
+    
+    <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script 
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+
+            <h1 class="title">
+                Christopher Shea's Lab 5: The HTML Form Strikes Map
+            </h1>
+
+        <div class="columns">
+            <div class="column">
+                
+            <form class="search-form">
+                <input type="text" class="search" placeholder="Look Up a Place!">
+                <ul class="suggestions">
+                    <li>Filter for a name or city!</li>
+                </ul>
+            </form>
+
+            <script src="script.js" charset="utf-8"></script> <!-- This empty script tag runs the "script.js" file in the same folder, this is where the magic happens -->
+
+            <!-- https://api.mapbox.com/{endpoint}?access_token={pk.eyJ1IjoiZG9udXRkb29tc2RheSIsImEiOiJja202dDU4MG8wcm53MnFvOXRmbzBkbmV5In0.F-Fpfjwcoo0qwDWVxjV4XQ} -->
+
+            </div>
+
+            <div class="column">
+
+            <div id="mapid"></div>
+                
+            </div>
+
+        </div>
+        </div>
+    </section>
+</body>
+</html>
