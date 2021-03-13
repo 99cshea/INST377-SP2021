@@ -1,3 +1,5 @@
+//const { map } = require("cypress/types/bluebird");
+
 function mapInit() {
   // follow the Leaflet Getting Started tutorial here
   const mymap = L.map('mapid').setView([38.987, -76.943], 13);
@@ -23,24 +25,26 @@ async function dataHandler(mapFromLeaflet) {
 
   const request = await fetch('/api');
   const data = await request.json();
+ //const firstfive = filtered.slice(5)
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     console.log('form submitted');
     const filtered = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
-    console.table(filtered);
+    const firstfive = filtered.slice(0,5)
+    //const mymap = L.map('mapid').setView([longLat[1], longLat[0]], 13);
+    console.table(firstfive);
 
-    filtered.forEach((item) => {
-
+    firstfive.forEach((item) => {
       const longLat = item.geocoded_column_1.coordinates;
       console.log('markerLongLat', longLat[0], longLat[1]);
       const marker = L.marker([longLat[1], longLat[0]]).addTo(mapFromLeaflet);
-      
 
       const appendItem = document.createElement('li');
       appendItem.classList.add('block');
       appendItem.classList.add('list-item');
-      appendItem.innerHTML = `<div class="list-header is-size-5>${item.name}</div><address class="is-size-6">${item.name} ${item.address_line_1}</address>`;
+      appendItem.innerHTML = `<span><div class="list-header is-size-5>${item.name}</span></div> 
+      <span><div><address class="is-size-6">${item.name} ${item.address_line_1}</address></div></span>`;
       targetList.append(appendItem);
 
     });

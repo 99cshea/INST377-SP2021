@@ -3,11 +3,14 @@ body {
     font-size: 18px;
     color: #444;
     padding: 0 10px;
+    
 }
 
 h1,
 h2,
 h3 {
+    font-size: 28px;
+    font-weight: 500;
     line-height: 1.2;
 }
 
@@ -21,7 +24,20 @@ h3 {
 li {
     border-radius: 4px;
     color: rgba(25, 25, 25, 90);
-    background: #00d1b2;
+    background: #4e9fe0;
     padding: 5px;
     list-style-type: circle;
+}
+
+address {
+    color: red;
+}
+
+html {
+    background-color: rgb(139, 214, 233);
+}
+
+form {
+    margin-bottom: 20px;
+    
 }
