@@ -18,9 +18,10 @@ h3 {
     font-size: 1.25rem;
 }
 
-.list-item {
+li {
     border-radius: 4px;
     color: rgba(25, 25, 25, 90);
     background: #00d1b2;
     padding: 5px;
+    list-style-type: circle;
 }
