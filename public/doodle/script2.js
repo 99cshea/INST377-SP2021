@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         createDoodler()
         setInterval(movePlatforms,30)
         jump(startPoint)
-        document.addEventListener('keydown', control)
+        document.addEventListener('keyup', control)
       } 
     }
     start()
